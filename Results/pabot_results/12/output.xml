@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-27T09:07:33.332595" rpa="false" schemaversion="5">
+<suite id="s1" name="Login DDT Excel" source="C:\Users\KapuluruMadhanMohanR\PycharmProjects\RobotFramework\Day11\DDT\Login_DDT_Excel.robot">
+<status status="SKIP" start="2024-12-27T09:07:33.366972" elapsed="1.635894"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="0" skip="0" id="s1" name="Login DDT Excel">Login DDT Excel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

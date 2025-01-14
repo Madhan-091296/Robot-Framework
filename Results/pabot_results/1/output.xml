@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-27T09:07:33.379329" rpa="false" schemaversion="5">
+<suite id="s1" name="Login DDT Excel" source="C:\Users\KapuluruMadhanMohanR\PycharmProjects\RobotFramework\Day11\DDT\Login_DDT_Excel.robot">
+<kw name="Open My Browser" owner="login_page_resource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:35.100615" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_experimental_option("detach",True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-27T09:07:35.099884" elapsed="12.028230"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-27T09:07:47.128489" elapsed="0.082800"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-27T09:07:47.211592" elapsed="0.002389"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:07:35.098396" elapsed="12.115786"/>
+</kw>
+<test id="s1-t1" name="Data Driven Testing using Test Data in Excel File" line="14">
+<kw name="Login Functionality">
+<kw name="Input Username" owner="login_page_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:47.218965" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:07:47.218004" elapsed="0.608544"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-12-27T09:07:47.217101" elapsed="0.609640"/>
+</kw>
+<kw name="Input Password" owner="login_page_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:47.828281" level="INFO">Typing text 'admin123' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:07:47.827769" elapsed="0.256528"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-12-27T09:07:47.826999" elapsed="0.257456"/>
+</kw>
+<kw name="Click Login Button" owner="login_page_resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:48.085516" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:07:48.085101" elapsed="1.306368"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:07:48.084659" elapsed="1.307097"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:49.418723" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-27T09:07:49.393305" elapsed="0.025512"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:07:49.419679" level="INFO">Current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index</msg>
+<arg>Current URL: ${current_url}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:07:49.419119" elapsed="0.000921"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Handle Successful Login">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:07:49.422902" level="INFO">Login successful</msg>
+<arg>Login successful</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:07:49.422388" elapsed="0.000816"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-12-27T09:07:49.425165" level="INFO">${login_status} = PASSED</msg>
+<arg>${login_status}</arg>
+<arg>PASSED</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-12-27T09:07:49.423509" elapsed="0.001817"/>
+</kw>
+<kw name="Click Logout Link" owner="login_page_resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:49.427383" level="INFO">Clicking element 'class:oxd-userdropdown-name'.</msg>
+<arg>class:oxd-userdropdown-name</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:07:49.426893" elapsed="0.520004"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:49.947689" level="INFO">Clicking link 'Logout'.</msg>
+<arg>Logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:07:49.947208" elapsed="1.771911"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:07:49.425817" elapsed="2.293851"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:07:49.421567" elapsed="2.298278"/>
+</kw>
+<arg>'${current_url}' == '${DASHBOARD_URL}'</arg>
+<arg>Handle Successful Login</arg>
+<arg>ELSE</arg>
+<arg>Handle Failed Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-27T09:07:49.420494" elapsed="2.299579"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:07:51.720967" level="INFO">Final Login Status: PASSED</msg>
+<arg>Final Login Status: ${login_status}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:07:51.720417" elapsed="0.000804"/>
+</kw>
+<arg>username=Admin</arg>
+<arg>password=admin123</arg>
+<status status="PASS" start="2024-12-27T09:07:47.216370" elapsed="4.505027"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:07:47.214335" elapsed="4.507298"/>
+</test>
+<test id="s1-t2" name="Data Driven Testing using Test Data in Excel File" line="14">
+<kw name="Login Functionality">
+<kw name="Input Username" owner="login_page_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:51.730418" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:07:51.729922" elapsed="0.512590"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-12-27T09:07:51.729163" elapsed="0.513583"/>
+</kw>
+<kw name="Input Password" owner="login_page_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:52.244125" level="INFO">Typing text 'admin12' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:07:52.243694" elapsed="0.256170"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-12-27T09:07:52.243046" elapsed="0.257018"/>
+</kw>
+<kw name="Click Login Button" owner="login_page_resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:52.501292" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:07:52.500951" elapsed="1.085568"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:07:52.500355" elapsed="1.086352"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:53.594933" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-27T09:07:53.586930" elapsed="0.008586"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:07:53.597045" level="INFO">Current URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<arg>Current URL: ${current_url}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:07:53.596010" elapsed="0.001269"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Handle Failed Login">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:07:53.599596" level="INFO">Login failed</msg>
+<arg>Login failed</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:07:53.599160" elapsed="0.000698"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:56.915109" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-27T09:07:56.915463" level="FAIL">Element with locator 'xpath=//p[contains(text(), "Invalid credentials")]' not found.</msg>
+<arg>xpath=//p[contains(text(), "${ERROR_MSG}")]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-12-27T09:07:53.600605" elapsed="3.323837">Element with locator 'xpath=//p[contains(text(), "Invalid credentials")]' not found.</status>
+</kw>
+<msg time="2024-12-27T09:07:56.925009" level="INFO">${error_visible} = False</msg>
+<var>${error_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//p[contains(text(), "${ERROR_MSG}")]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-27T09:07:53.600117" elapsed="3.324991"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:07:56.926329" level="INFO">Error Message Visible: False</msg>
+<arg>Error Message Visible: ${error_visible}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:07:56.925480" elapsed="0.001204"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-12-27T09:07:56.928979" level="INFO">${login_status} = FAILED</msg>
+<arg>${login_status}</arg>
+<arg>FAILED</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-12-27T09:07:56.927054" elapsed="0.002089"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:07:53.598480" elapsed="3.330870"/>
+</kw>
+<arg>'${current_url}' == '${DASHBOARD_URL}'</arg>
+<arg>Handle Successful Login</arg>
+<arg>ELSE</arg>
+<arg>Handle Failed Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-27T09:07:53.597652" elapsed="3.331828"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:07:56.930472" level="INFO">Final Login Status: FAILED</msg>
+<arg>Final Login Status: ${login_status}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:07:56.929802" elapsed="0.000933"/>
+</kw>
+<arg>username=Admin</arg>
+<arg>password=admin12</arg>
+<status status="PASS" start="2024-12-27T09:07:51.728343" elapsed="5.203332"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:07:51.723851" elapsed="5.208170"/>
+</test>
+<test id="s1-t3" name="Data Driven Testing using Test Data in Excel File" line="14">
+<kw name="Login Functionality">
+<kw name="Input Username" owner="login_page_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:56.938944" level="INFO">Typing text 'Adm' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:07:56.938147" elapsed="0.258207"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-12-27T09:07:56.937190" elapsed="0.259602"/>
+</kw>
+<kw name="Input Password" owner="login_page_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:57.199211" level="INFO">Typing text 'admin123' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:07:57.198366" elapsed="0.624943"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-12-27T09:07:57.197313" elapsed="0.626258"/>
+</kw>
+<kw name="Click Login Button" owner="login_page_resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:57.825223" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:07:57.824701" elapsed="0.143210"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:07:57.823918" elapsed="0.144280"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:07:58.755472" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-27T09:07:57.968509" elapsed="0.787067"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:07:58.756607" level="INFO">Current URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<arg>Current URL: ${current_url}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:07:58.755839" elapsed="0.001088"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Handle Failed Login">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:07:58.759809" level="INFO">Login failed</msg>
+<arg>Login failed</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:07:58.759294" elapsed="0.000832"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:08:01.875416" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-27T09:08:01.875650" level="FAIL">Element with locator 'xpath=//p[contains(text(), "Invalid credentials")]' not found.</msg>
+<arg>xpath=//p[contains(text(), "${ERROR_MSG}")]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-12-27T09:07:58.761134" elapsed="3.116150">Element with locator 'xpath=//p[contains(text(), "Invalid credentials")]' not found.</status>
+</kw>
+<msg time="2024-12-27T09:08:01.877474" level="INFO">${error_visible} = False</msg>
+<var>${error_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//p[contains(text(), "${ERROR_MSG}")]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-27T09:07:58.760559" elapsed="3.116956"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:08:01.877997" level="INFO">Error Message Visible: False</msg>
+<arg>Error Message Visible: ${error_visible}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:08:01.877690" elapsed="0.000446"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-12-27T09:08:01.879314" level="INFO">${login_status} = FAILED</msg>
+<arg>${login_status}</arg>
+<arg>FAILED</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-12-27T09:08:01.878424" elapsed="0.000961"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:07:58.758477" elapsed="3.121016"/>
+</kw>
+<arg>'${current_url}' == '${DASHBOARD_URL}'</arg>
+<arg>Handle Successful Login</arg>
+<arg>ELSE</arg>
+<arg>Handle Failed Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-27T09:07:58.757537" elapsed="3.122041"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:08:01.880006" level="INFO">Final Login Status: FAILED</msg>
+<arg>Final Login Status: ${login_status}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:08:01.879730" elapsed="0.000403"/>
+</kw>
+<arg>username=Adm</arg>
+<arg>password=admin123</arg>
+<status status="PASS" start="2024-12-27T09:07:56.936024" elapsed="4.944215"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:07:56.933104" elapsed="4.947280"/>
+</test>
+<test id="s1-t4" name="Data Driven Testing using Test Data in Excel File" line="14">
+<kw name="Login Functionality">
+<kw name="Input Username" owner="login_page_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:08:01.883540" level="INFO">Typing text 'Adm' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:08:01.883191" elapsed="0.091518"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-12-27T09:08:01.882769" elapsed="0.092051"/>
+</kw>
+<kw name="Input Password" owner="login_page_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:08:01.976046" level="INFO">Typing text 'admin12' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:08:01.975637" elapsed="0.171102"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-12-27T09:08:01.974967" elapsed="0.172044"/>
+</kw>
+<kw name="Click Login Button" owner="login_page_resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:08:02.148198" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-27T09:08:02.147900" elapsed="0.786238"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:08:02.147362" elapsed="0.786969"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:08:02.941689" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-27T09:08:02.934721" elapsed="0.007025"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:08:02.942312" level="INFO">Current URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<arg>Current URL: ${current_url}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:08:02.941943" elapsed="0.000526"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Handle Failed Login">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:08:02.943801" level="INFO">Login failed</msg>
+<arg>Login failed</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:08:02.943500" elapsed="0.000436"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-27T09:08:06.088417" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-27T09:08:06.088616" level="FAIL">Element with locator 'xpath=//p[contains(text(), "Invalid credentials")]' not found.</msg>
+<arg>xpath=//p[contains(text(), "${ERROR_MSG}")]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-12-27T09:08:02.946024" elapsed="3.144581">Element with locator 'xpath=//p[contains(text(), "Invalid credentials")]' not found.</status>
+</kw>
+<msg time="2024-12-27T09:08:06.090847" level="INFO">${error_visible} = False</msg>
+<var>${error_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//p[contains(text(), "${ERROR_MSG}")]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-27T09:08:02.944318" elapsed="3.146571"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:08:06.091416" level="INFO">Error Message Visible: False</msg>
+<arg>Error Message Visible: ${error_visible}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:08:06.091072" elapsed="0.000498"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-12-27T09:08:06.092543" level="INFO">${login_status} = FAILED</msg>
+<arg>${login_status}</arg>
+<arg>FAILED</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-12-27T09:08:06.091729" elapsed="0.000885"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:08:02.943052" elapsed="3.149673"/>
+</kw>
+<arg>'${current_url}' == '${DASHBOARD_URL}'</arg>
+<arg>Handle Successful Login</arg>
+<arg>ELSE</arg>
+<arg>Handle Failed Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-27T09:08:02.942623" elapsed="3.150177"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-27T09:08:06.093223" level="INFO">Final Login Status: FAILED</msg>
+<arg>Final Login Status: ${login_status}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-27T09:08:06.092943" elapsed="0.000414"/>
+</kw>
+<arg>username=Adm</arg>
+<arg>password=admin12</arg>
+<status status="PASS" start="2024-12-27T09:08:01.882273" elapsed="4.211188"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:08:01.880960" elapsed="4.212646"/>
+</test>
+<kw name="Close Browsers" owner="login_page_resource" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-12-27T09:08:06.094462" elapsed="2.295606"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:08:06.094146" elapsed="2.296177"/>
+</kw>
+<status status="PASS" start="2024-12-27T09:07:33.414064" elapsed="34.976372"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Login DDT Excel">Login DDT Excel</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-27T09:07:51.723232" level="WARN">Multiple tests with name 'Data Driven Testing using Test Data in Excel File' executed in suite 'Login DDT Excel'.</msg>
+<msg time="2024-12-27T09:07:56.932794" level="WARN">Multiple tests with name 'Data Driven Testing using Test Data in Excel File' executed in suite 'Login DDT Excel'.</msg>
+<msg time="2024-12-27T09:08:01.880756" level="WARN">Multiple tests with name 'Data Driven Testing using Test Data in Excel File' executed in suite 'Login DDT Excel'.</msg>
+</errors>
+</robot>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TradeHUB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XSD_with_some_validations.xsd">
+	<header>
+		<dataSourceCode>CHRIVER</dataSourceCode>
+		<messageType>NEWMaa</messageType>
+		<msgDateTimestamp>2024-12-04 BS11:19:08</msgDateTimestamp>
+		<orderId>3891640168</orderId>
+	</header>
+	<TradeParent>
+		<BlockTrade>
+			<accrualDays/>
+			<accrualType/>
+			<accrualTypeName/>			
+			<allocdDatetime>2024-12-04 10:29:08</allocdDatetime>
+			<allocationCount>1</allocationCount>
+			<assetCurrency>USD</assetCurrency>
+			<baseTicker>PSA</baseTicker>
+			<blockCommissionAmt>40.00</blockCommissionAmt>
+			<blockCommissionExecutionAmt>40.00</blockCommissionExecutionAmt>
+			<blockCommissionResearchAmt>0.00</blockCommissionResearchAmt>
+			<blockIncAmt>0.00</blockIncAmt>
+			<blockOthrFee>0.00</blockOthrFee>
+			<blockProceedsAmount>298293.50</blockProceedsAmount>
+			<blockQty>1000</blockQty>
+			<blockRegfFee>0.00</blockRegfFee>
+			<blockSellingConcession>0.0000</blockSellingConcession>
+			<blockTotalFee>0.00</blockTotalFee>
+			<blockTotalTrade>298253.50</blockTotalTrade>
+			<bloombergMkteSect>EQUITY</bloombergMkteSect>
+			<calcPrecision>2</calcPrecision>
+			<contractSize>1.00</contractSize>
+			<contraPartyAcronym>INST</contraPartyAcronym>
+			<contraPartyName>INSTINET, INC.</contraPartyName>
+			<countryOfRisk>US</countryOfRisk>
+			<couponRate>0</couponRate>
+			<crdAssetClassCd/>
+			<crdSecurityId>1202004068</crdSecurityId>
+			<createDatetime>2024-12-04 10:24:47</createDatetime>
+			<createUser>SHELTPJ</createUser>
+			<createUsername>PHIL SHELTON</createUsername>
+			<crossOrderID/>
+			<currencyTransactionCode>USD</currencyTransactionCode>
+			<currentFactor>1</currentFactor>
+			<cusip>74460D109</cusip>
+			<dataSourceCode>CHRIVER</dataSourceCode>
+			<datedDt/>
+			<dayBasis/>
+			<eagleSecAlias>12696</eagleSecAlias>
+			<exchCountry>US</exchCountry>
+			<executedTradeDate>2024-01-08</executedTradeDate>
+			<executedTradeEndTime>00:00:00</executedTradeEndTime>
+			<executedTradeStartTime>00:00:00</executedTradeStartTime>
+			<execYield/>
+			<expireDate/>
+			<exportDateTimestamp>2024-12-04 11:19:01</exportDateTimestamp>
+			<!-- <ipoSoFlag>N</ipoSoFlag> -->
+			<isin>US74460D1090</isin>
+			<isitcAssetTypeBBHDM/>
+			<isitcSecurityTypeBBHDM/>
+			<issueCountry>US</issueCountry>
+			<issuerIssuer>74460D</issuerIssuer>
+			<issuerName>PUBLIC STORAGE</issuerName>
+			<listExchange>XNYS</listExchange>
+			<longShortIndicator>N</longShortIndicator>
+			<lotSize>1.00</lotSize>
+			<managerInitials>DLM</managerInitials>
+			<managerName>DANA MEISSNER</managerName>
+			<matureDate/>
+			<messageType>NEWM</messageType>
+			<omsExecBroker>NEWPORT</omsExecBroker>
+			<omsExecBrokerName>INSTINET NEWPORT APPLICATION</omsExecBrokerName>
+			<openClose>O</openClose>
+			<optionExpirationType/>
+			<orderDuration>GTC</orderDuration>
+			<orderExchCd>XNYS</orderExchCd>
+			<orderId>3891640168</orderId>
+			<orderReasonCd>NEWS</orderReasonCd>
+			<orderReasonDesc>EQ: NEWS/RESEARCH REVISIONS</orderReasonDesc>
+			<orderSide>BUY</orderSide>
+			<originalOrderID/>
+			<parentIssuer>74460D</parentIssuer>
+			<parentIssuereName>PUBLIC STORAGE</parentIssuereName>
+			<price>298.2535</price>
+			<prinAgncy>A</prinAgncy>
+			<privatePlacementFlag>N</privatePlacementFlag>
+			<putCall/>
+			<reasonCode>01</reasonCode>
+			<reasonDesc>COMMISSION</reasonDesc>
+			<restrictedFlag144A>N</restrictedFlag144A>
+			<revisionFlag>N</revisionFlag>
+			<secConversionFactor>1</secConversionFactor>
+			<secName>PUBLIC STORAGE - REIT</secName>
+			<secTypeCd>COMREIT</secTypeCd>
+			<sedol>2852533</sedol>
+			<sellCrossOrderID/>
+			<sentAcctDatetime>2024-12-04 10:29:19</sentAcctDatetime>
+			<settlementDate>2024-01-10</settlementDate>
+			<shortDescription>PUBLIC STORAGE, INC.</shortDescription>
+			<sirsSecurityId>29544</sirsSecurityId>
+			<smaCommentary/>
+			<statusIndicator>ACCT</statusIndicator>
+			<strikePrice/>
+			<syndicateCount>0</syndicateCount>
+			<ticker>PSA</ticker>
+			<tickerExchange/>
+			<toTraderDatetime>2024-12-04 10:24:47</toTraderDatetime>
+			<trade17A7Flag>N</trade17A7Flag>
+			<tradeDate>2024-01-08</tradeDate>
+			<tradePlacedDate>2024-01-08</tradePlacedDate>
+			<tradePlacedTime>00:00:00</tradePlacedTime>
+			<traderInitials>CXH</traderInitials>
+			<traderName>CHAD HUDSON</traderName>
+			<tradetTransIndicator/>
+			<transactionType>BUY</transactionType>
+			<transType>BUYL</transType>
+			<typeTransactionCode>B</typeTransactionCode>
+			<underlying_country_of_risk/>
+			<underlying_sirs_secId/>
+			<underlyingCrdSecId/>
+			<underlyingCusip/>
+			<underlyingEagleSecAlias/>
+			<underlyingIsin/>
+			<underlyingIssueCountry/>
+			<underlyingListExchange/>
+			<underlyingSecName/>
+			<underlyingSecType/>
+			<underlyingSedol/>
+			<clientSecurityId>E12696</clientSecurityId>
+			<underlyingShortDescription/>
+			<syndicateDetail>
+				<managementFeeCps/>
+				<pctOrder/>
+				<quantity/>
+				<sellingConcessionCps/>
+				<syndicateAcronym/>
+				<totalConcessionCps/>
+				<underwriterExpenseCps/>
+			</syndicateDetail>
+			<TradeChild>
+				<accountingTrade>
+					<allocQty>1000</allocQty>
+					<allocSellingConcession>0.0000</allocSellingConcession>
+					<allocTotalFee>0.00</allocTotalFee>
+					<brokerReasonCd>SOFT</brokerReasonCd>
+					<brokerReasonDesc>SOFT DOLLAR</brokerReasonDesc>
+					<clearBroker/>
+					<clearingBrokerAcronymBBHDM/>
+					<comments>COMMENTS: : SPECIAL_INSTRUCTIONS:</comments>
+					<commisionEffRate>4.00</commisionEffRate>
+					<commission>40.00</commission>
+					<commissionExecutionAmt>40.00</commissionExecutionAmt>
+					<commissionInd>CPS</commissionInd>
+					<commissionResearchAmt>0.00</commissionResearchAmt>
+					<conditionInd/>
+					<creditBroker/>
+					<crossTradeId/>
+					<custodianAccountBBHDM/>
+					<custodianBICBBHDM/>
+					<custodianFundNumber>22V1</custodianFundNumber>
+					<custodianName>STATE STREET BOSTON</custodianName>
+					<custodianNameBBHDM/>
+					<deliveryType>DTC</deliveryType>
+					<fundCurrency>USD</fundCurrency>
+					<localNetAmount>298293.50</localNetAmount>
+					<localToBaseFXRate>1</localToBaseFXRate>
+					<lotBasedFund>Y</lotBasedFund>
+					<omsAcctCode>FPBF</omsAcctCode>
+					<omsAcctEglEntityId>MFE00047</omsAcctEglEntityId>
+					<omsAcctName>FEDERATED HERMES PRUDENT BEAR FUND</omsAcctName>
+					<omsCrossingAcct/>
+					<omsCrossingAcctEglEntityId/>
+					<omsCrossingAcctName/>
+					<originalTradeId/>
+					<otherFee>0.00</otherFee>
+					<pmUser/>
+					<pmUserName/>
+					<primeBroker/>
+					<principalAmt>298253.50</principalAmt>
+					<pset>DTCYUS33</pset>
+					<secFee>0.00</secFee>
+					<securityCurrency>USD</securityCurrency>
+					<securityToUsdRate>1</securityToUsdRate>
+					<settlementAccountCode>FPBF</settlementAccountCode>
+					<settlementAccountName>FEDERATED HERMES PRUDENT BEAR FUND</settlementAccountName>
+					<settlementAcctEglEntityId>MFE00047</settlementAcctEglEntityId>
+					<settlementCrossingAcct/>
+					<settlementCrossingAcctCustodianName/>
+					<settlementCrossingAcctEglEntityId/>
+					<settlementCrossingAcctFundNumber/>
+					<settlementCrossingAcctName/>
+					<stepOutBroker/>
+					<totalLotsRelieved>1</totalLotsRelieved>
+					<tradedCurrency>USD</tradedCurrency>
+					<tradedCurrencyToUsd>USD</tradedCurrencyToUsd>
+					<tradedInterest>0.00</tradedInterest>
+					<tradedInterestCcy/>
+					<tradedToUsdRate>1</tradedToUsdRate>
+					<tradeId>1261915588</tradeId>
+					<tradeLot>
+						<lotId>1263032281</lotId>
+						<relievingLotBrokerReason/>
+						<relievingLotFollowsFundMethod/>
+						<relievingLotOmsExecBroker/>
+						<relievingLotOrderId/>
+						<relievingLotPrice/>
+						<relievingLotQty/>
+						<relievingLotReliefMethodCd/>
+						<relievingLotReliefMethodDesc/>
+						<relievingLotSettleDate/>
+						<relievingLotSettleExecBroker/>
+						<relievingLotTradeDate/>
+						<relievingLotTradeId/>
+					</tradeLot>
+					<entityFlag>FHI</entityFlag>
+				</accountingTrade>
+			</TradeChild>
+			<FH_CountryOfQuotation>US</FH_CountryOfQuotation>
+		</BlockTrade>
+	</TradeParent>
+</TradeHUB>

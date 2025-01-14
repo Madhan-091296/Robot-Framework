@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-27T09:18:07.788766" rpa="false" schemaversion="5">
+<suite id="s1" name="Rerun Failed Test" source="C:\Users\KapuluruMadhanMohanR\PycharmProjects\RobotFramework\Day11\Rerun_Failed_Test.robot">
+<test id="s1-t1" name="Compare Unequal Values" line="7">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-27T09:18:07.814212" level="INFO">${value1} = 10</msg>
+<var>${value1}</var>
+<arg>10</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-27T09:18:07.814080" elapsed="0.000156"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-27T09:18:07.814870" level="INFO">${value2} = 20</msg>
+<var>${value2}</var>
+<arg>20</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-27T09:18:07.814707" elapsed="0.000190"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<arg>${value1}</arg>
+<arg>${value2}</arg>
+<arg>Values should not be equal!</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2024-12-27T09:18:07.815107" elapsed="0.000181"/>
+</kw>
+<doc>Test to Compare Unequal Values.</doc>
+<status status="PASS" start="2024-12-27T09:18:07.813454" elapsed="0.002350"/>
+</test>
+<status status="PASS" start="2024-12-27T09:18:07.790554" elapsed="0.026276"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Rerun Failed Test">Rerun Failed Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

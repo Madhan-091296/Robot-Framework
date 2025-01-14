@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-08T21:15:16.907390" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotFramework" source="C:\Users\KapuluruMadhanMohanR\PycharmProjects\RobotFramework">
+<suite id="s1-s1" name="Day10" source="C:\Users\KapuluruMadhanMohanR\PycharmProjects\RobotFramework\Day10">
+<suite id="s1-s1-s1" name="Alerts" source="C:\Users\KapuluruMadhanMohanR\PycharmProjects\RobotFramework\Day10\Alerts.robot">
+<test id="s1-s1-s1-t1" name="Handle Tables" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-08T21:15:17.187113" level="INFO">Opening browser 'edge' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<arg>${URL}</arg>
+<arg>edge</arg>
+<arg>options=add_experimental_option("detach",True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-08T21:15:17.186823" elapsed="6.721134"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-08T21:15:23.908612" elapsed="0.045571"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-01-08T21:15:23.955104" elapsed="0.002599"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-08T21:15:23.958646" level="INFO">Clicking element '//button[@id="promptBtn"]'.</msg>
+<arg>//button[@id="promptBtn"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-08T21:15:23.958240" elapsed="0.106860"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-01-08T21:15:24.065835" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Please enter your name:</arg>
+<arg>action=LEAVE</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-01-08T21:15:24.065625" elapsed="0.005105"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-08T21:15:27.071958" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-08T21:15:24.071035" elapsed="3.001046"/>
+</kw>
+<kw name="Input Text Into Alert" owner="SeleniumLibrary">
+<arg>Python</arg>
+<arg>action=ACCEPT</arg>
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<status status="PASS" start="2025-01-08T21:15:27.072719" elapsed="0.007250"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-08T21:15:27.111509" level="INFO">Current page contains text 'Python'.</msg>
+<arg>Python</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-01-08T21:15:27.080854" elapsed="0.030775"/>
+</kw>
+<status status="PASS" start="2025-01-08T21:15:17.186033" elapsed="9.926192"/>
+</test>
+<status status="PASS" start="2025-01-08T21:15:16.933022" elapsed="10.180267"/>
+</suite>
+<status status="PASS" start="2025-01-08T21:15:16.931490" elapsed="10.183016"/>
+</suite>
+<status status="PASS" start="2025-01-08T21:15:16.909594" elapsed="10.205936"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="RobotFramework">RobotFramework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Day10">RobotFramework.Day10</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Alerts">RobotFramework.Day10.Alerts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

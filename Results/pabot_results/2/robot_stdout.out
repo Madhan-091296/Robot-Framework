@@ -1,0 +1,30 @@
+==============================================================================
+Login DDT Excel                                                               
+==============================================================================
+Data Driven Testing using Test Data in Excel File                     Current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+Login successful
+Final Login Status: PASSED
+| PASS |
+------------------------------------------------------------------------------
+Data Driven Testing using Test Data in Excel File                     Current URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+Login failed
+Error Message Visible: False
+Final Login Status: FAILED
+| PASS |
+------------------------------------------------------------------------------
+Data Driven Testing using Test Data in Excel File                     Current URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+Login failed
+Error Message Visible: False
+Final Login Status: FAILED
+| PASS |
+------------------------------------------------------------------------------
+Data Driven Testing using Test Data in Excel File                     Current URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+Login failed
+Error Message Visible: False
+Final Login Status: FAILED
+| PASS |
+------------------------------------------------------------------------------
+Login DDT Excel                                                       | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Output:  C:\Users\KapuluruMadhanMohanR\PycharmProjects\RobotFramework\Results\pabot_results\2\output.xml

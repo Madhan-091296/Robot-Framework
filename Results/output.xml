@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-27T09:24:37.452464" rpa="false" schemaversion="5">
+<suite id="s1" name="Rerun Failed Test" source="C:\Users\KapuluruMadhanMohanR\PycharmProjects\RobotFramework\Day11\Rerun_Failed_Test.robot">
+<test id="s1-t1" name="Compare Equal Values" line="2">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-27T09:24:37.417187" level="INFO">${value1} = 10</msg>
+<var>${value1}</var>
+<arg>10</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-27T09:24:37.417109" elapsed="0.000095"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-27T09:24:37.417597" level="INFO">${value2} = 20</msg>
+<var>${value2}</var>
+<arg>20</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-27T09:24:37.417512" elapsed="0.000103"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2024-12-27T09:24:37.418253" level="FAIL">Values are not equal!: 10 != 20</msg>
+<arg>${value1}</arg>
+<arg>${value2}</arg>
+<arg>Values are not equal!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="FAIL" start="2024-12-27T09:24:37.417992" elapsed="0.000315">Values are not equal!: 10 != 20</status>
+</kw>
+<doc>Test to Compare Equal Values.</doc>
+<status status="FAIL" start="2024-12-27T09:24:37.416476" elapsed="0.002098">Values are not equal!: 10 != 20
+[RETRY] FAIL on 3. retry.</status>
+</test>
+<test id="s1-t2" name="Compare Unequal Values" line="8">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-27T09:24:37.431060" level="INFO">${value1} = 10</msg>
+<var>${value1}</var>
+<arg>10</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-27T09:24:37.430976" elapsed="0.000100"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-27T09:24:37.431478" level="INFO">${value2} = 10</msg>
+<var>${value2}</var>
+<arg>10</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-27T09:24:37.431393" elapsed="0.000100"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2024-12-27T09:24:37.431919" level="FAIL">Values should not be equal!: 10 == 10</msg>
+<arg>${value1}</arg>
+<arg>${value2}</arg>
+<arg>Values should not be equal!</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="FAIL" start="2024-12-27T09:24:37.431768" elapsed="0.000189">Values should not be equal!: 10 == 10</status>
+</kw>
+<doc>Test to Compare Unequal Values.</doc>
+<status status="FAIL" start="2024-12-27T09:24:37.430243" elapsed="0.002056">Values should not be equal!: 10 == 10
+[RETRY] FAIL on 3. retry.</status>
+</test>
+<test id="s1-t3" name="Compare Greater Value" line="13">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-27T09:24:37.443938" level="INFO">${value1} = 20</msg>
+<var>${value1}</var>
+<arg>20</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-27T09:24:37.443860" elapsed="0.000094"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-27T09:24:37.444377" level="INFO">${value2} = 30</msg>
+<var>${value2}</var>
+<arg>30</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-27T09:24:37.444287" elapsed="0.000105"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<msg time="2024-12-27T09:24:37.444897" level="FAIL">20 is not greater than 30!</msg>
+<arg>${value1} &gt; ${value2}</arg>
+<arg>${value1} is not greater than ${value2}!</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="FAIL" start="2024-12-27T09:24:37.444728" elapsed="0.000208">20 is not greater than 30!</status>
+</kw>
+<doc>Test to Compare Greater Value.</doc>
+<status status="FAIL" start="2024-12-27T09:24:37.443224" elapsed="0.002054">20 is not greater than 30!
+[RETRY] FAIL on 3. retry.</status>
+</test>
+<status status="FAIL" start="2024-12-27T09:24:37.395510" elapsed="0.050960"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Rerun Failed Test">Rerun Failed Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-27T09:24:37.416176" level="WARN" html="true">Test '&lt;a onclick="makeElementVisible('s1-t1')" href="#s1-t1" title="Link to details"&gt;Compare Equal Values&lt;/a&gt;' has been retried 3 times (max: 3).</msg>
+<msg time="2024-12-27T09:24:37.429957" level="WARN" html="true">Test '&lt;a onclick="makeElementVisible('s1-t2')" href="#s1-t2" title="Link to details"&gt;Compare Unequal Values&lt;/a&gt;' has been retried 3 times (max: 3).</msg>
+<msg time="2024-12-27T09:24:37.442956" level="WARN" html="true">Test '&lt;a onclick="makeElementVisible('s1-t3')" href="#s1-t3" title="Link to details"&gt;Compare Greater Value&lt;/a&gt;' has been retried 3 times (max: 3).</msg>
+</errors>
+</robot>

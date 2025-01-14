@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TradeHUB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="header">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="messageType">
+                <xs:simpleType>
+              		<xs:restriction base="xs:string">
+                      <xs:enumeration value="NEWM"/> <!-- Ensure only one of these values exist  -->
+     				  <xs:enumeration value="CANC"/>
+                      <xs:enumeration value="TEST"/>
+                      <xs:enumeration value="ECHO"/>
+    				</xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dataSourceCode">        
+                <xs:simpleType>
+              		<xs:restriction base="xs:string">
+                		<xs:minLength value="2"/> <!-- Ensure there is at least 1 character of data -->
+    				</xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="msgDateTimestamp"> <!-- dateTime format so space between date and time in xml can be validated-->
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element type="xs:long" name="orderId"/>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TradeParent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BlockTrade">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="accrualDays"/>
+                    <xs:element type="xs:string" name="accrualType"/>
+                    <xs:element type="xs:string" name="accrualTypeName"/>
+                    <xs:element type="xs:byte" name="allocationCount"/>
+                    <xs:element type="xs:string" name="allocdDatetime"/>
+                    <xs:element type="xs:string" name="assetCurrency"/>
+                    <xs:element type="xs:string" name="baseTicker"/>
+                    <xs:element type="xs:float" name="blockCommissionAmt"/>
+                    <xs:element type="xs:float" name="blockCommissionExecutionAmt"/>
+                    <xs:element type="xs:float" name="blockCommissionResearchAmt"/>
+                    <xs:element type="xs:float" name="blockIncAmt"/>
+                    <xs:element type="xs:float" name="blockOthrFee"/>
+                    <xs:element type="xs:float" name="blockProceedsAmount"/>
+                    <xs:element type="xs:short" name="blockQty"/>
+                    <xs:element type="xs:float" name="blockRegfFee"/>
+                    <xs:element type="xs:float" name="blockSellingConcession"/>
+                    <xs:element type="xs:float" name="blockTotalFee"/>
+                    <xs:element type="xs:float" name="blockTotalTrade"/>
+                    <xs:element type="xs:string" name="bloombergMkteSect"/>
+                    <xs:element type="xs:byte" name="calcPrecision"/>
+                    <xs:element type="xs:float" name="contractSize"/>
+                    <xs:element type="xs:string" name="contraPartyAcronym"/>
+                    <xs:element type="xs:string" name="contraPartyName"/>
+                    <xs:element type="xs:string" name="countryOfRisk"/>
+                    <xs:element type="xs:byte" name="couponRate"/>
+                    <xs:element type="xs:string" name="crdAssetClassCd"/>
+                    <xs:element type="xs:int" name="crdSecurityId"/>
+                    <xs:element type="xs:string" name="createDatetime"/>
+                    <xs:element type="xs:string" name="createUser"/>
+                    <xs:element type="xs:string" name="createUsername"/>
+                    <xs:element type="xs:string" name="crossOrderID"/>
+                    <xs:element type="xs:string" name="currencyTransactionCode"/>
+                    <xs:element type="xs:byte" name="currentFactor"/>
+                    <xs:element type="xs:string" name="cusip"/>
+                    <xs:element type="xs:string" name="dataSourceCode"/>
+                    <xs:element type="xs:string" name="datedDt"/>
+                    <xs:element type="xs:string" name="dayBasis"/>
+                    <xs:element type="xs:short" name="eagleSecAlias"/>
+                    <xs:element type="xs:string" name="exchCountry"/>
+                    <xs:element type="xs:date" name="executedTradeDate"/>
+                    <xs:element type="xs:time" name="executedTradeEndTime"/>
+                    <xs:element type="xs:time" name="executedTradeStartTime"/>
+                    <xs:element type="xs:string" name="execYield"/>
+                    <xs:element type="xs:string" name="expireDate"/>
+                    <xs:element type="xs:string" name="exportDateTimestamp"/>
+                    <xs:element type="xs:string" name="ipoSoFlag" minOccurs="0"/> <!-- for tag to be optional -->
+                    <xs:element type="xs:string" name="isin"/>
+                    <xs:element type="xs:string" name="isitcAssetTypeBBHDM"/>
+                    <xs:element type="xs:string" name="isitcSecurityTypeBBHDM"/>
+                    <xs:element type="xs:string" name="issueCountry"/>
+                    <xs:element type="xs:float" name="issuerIssuer"/>
+                    <xs:element type="xs:string" name="issuerName"/> <!-- Issuer Name has to be string -->
+                    <xs:element type="xs:string" name="listExchange"/>
+                    <xs:element type="xs:string" name="longShortIndicator"/>
+                    <xs:element type="xs:float" name="lotSize"/>
+                    <xs:element type="xs:string" name="managerInitials"/>
+                    <xs:element type="xs:string" name="managerName"/>
+                    <xs:element type="xs:string" name="matureDate"/>
+                    <xs:element type="xs:string" name="messageType"/>
+                    <xs:element type="xs:string" name="omsExecBroker"/>
+                    <xs:element type="xs:string" name="omsExecBrokerName"/>
+                    <xs:element type="xs:string" name="openClose"/>
+                    <xs:element type="xs:string" name="optionExpirationType"/>
+                    <xs:element type="xs:string" name="orderDuration"/>
+                    <xs:element type="xs:string" name="orderExchCd"/>
+                    <xs:element type="xs:long" name="orderId"/>
+                    <xs:element type="xs:string" name="orderReasonCd"/>
+                    <xs:element type="xs:string" name="orderReasonDesc"/>
+                    <xs:element type="xs:string" name="orderSide"/>
+                    <xs:element type="xs:string" name="originalOrderID"/>
+                    <xs:element type="xs:float" name="parentIssuer"/>
+                    <xs:element type="xs:string" name="parentIssuereName"/>
+                    <xs:element type="xs:float" name="price"/>
+                    <xs:element type="xs:string" name="prinAgncy"/>
+                    <xs:element type="xs:string" name="privatePlacementFlag"/>
+                    <xs:element type="xs:string" name="putCall"/>
+                    <xs:element type="xs:byte" name="reasonCode"/>
+                    <xs:element type="xs:string" name="reasonDesc"/>
+                    <xs:element type="xs:string" name="restrictedFlag144A"/>
+                    <xs:element type="xs:string" name="revisionFlag"/>
+                    <xs:element type="xs:byte" name="secConversionFactor"/>
+                    <xs:element type="xs:string" name="secName"/>
+                    <xs:element type="xs:string" name="secTypeCd"/>
+                    <xs:element type="xs:int" name="sedol"/>
+                    <xs:element type="xs:string" name="sellCrossOrderID"/>
+                    <xs:element type="xs:string" name="sentAcctDatetime"/>
+                    <xs:element type="xs:date" name="settlementDate"/>
+                    <xs:element type="xs:string" name="shortDescription"/>
+                    <xs:element type="xs:short" name="sirsSecurityId"/>
+                    <xs:element type="xs:string" name="smaCommentary"/>
+                    <xs:element type="xs:string" name="statusIndicator"/>
+                    <xs:element type="xs:string" name="strikePrice"/>
+                    <xs:element type="xs:byte" name="syndicateCount"/>
+                    <xs:element type="xs:string" name="ticker"/>
+                    <xs:element type="xs:string" name="tickerExchange"/>
+                    <xs:element type="xs:string" name="toTraderDatetime"/>
+                    <xs:element type="xs:string" name="trade17A7Flag"/>
+                    <xs:element type="xs:date" name="tradeDate"/>
+                    <xs:element type="xs:date" name="tradePlacedDate"/>
+                    <xs:element type="xs:time" name="tradePlacedTime"/>
+                    <xs:element type="xs:string" name="traderInitials"/>
+                    <xs:element type="xs:string" name="traderName"/>
+                    <xs:element type="xs:string" name="tradetTransIndicator"/>
+                    <xs:element type="xs:string" name="transactionType"/>
+                    <xs:element type="xs:string" name="transType"/>
+                    <xs:element type="xs:string" name="typeTransactionCode"/>
+                    <xs:element type="xs:string" name="underlying_country_of_risk"/>
+                    <xs:element type="xs:string" name="underlying_sirs_secId"/>
+                    <xs:element type="xs:string" name="underlyingCrdSecId"/>
+                    <xs:element type="xs:string" name="underlyingCusip"/>
+                    <xs:element type="xs:string" name="underlyingEagleSecAlias"/>
+                    <xs:element type="xs:string" name="underlyingIsin"/>
+                    <xs:element type="xs:string" name="underlyingIssueCountry"/>
+                    <xs:element type="xs:string" name="underlyingListExchange"/>
+                    <xs:element type="xs:string" name="underlyingSecName"/>
+                    <xs:element type="xs:string" name="underlyingSecType"/>
+                    <xs:element type="xs:string" name="underlyingSedol"/>
+                    <xs:element type="xs:string" name="clientSecurityId"/>
+                    <xs:element type="xs:string" name="underlyingShortDescription"/>
+                    <xs:element name="syndicateDetail">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="managementFeeCps"/>
+                          <xs:element type="xs:string" name="pctOrder"/>
+                          <xs:element type="xs:string" name="quantity"/>
+                          <xs:element type="xs:string" name="sellingConcessionCps"/>
+                          <xs:element type="xs:string" name="syndicateAcronym"/>
+                          <xs:element type="xs:string" name="totalConcessionCps"/>
+                          <xs:element type="xs:string" name="underwriterExpenseCps"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="TradeChild">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="accountingTrade">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:short" name="allocQty"/>
+                                <xs:element type="xs:float" name="allocSellingConcession"/>
+                                <xs:element type="xs:float" name="allocTotalFee"/>
+                                <xs:element type="xs:string" name="brokerReasonCd"/>
+                                <xs:element type="xs:string" name="brokerReasonDesc"/>
+                                <xs:element type="xs:string" name="clearBroker"/>
+                                <xs:element type="xs:string" name="clearingBrokerAcronymBBHDM"/>
+                                <xs:element type="xs:string" name="comments"/>
+                                <xs:element type="xs:float" name="commisionEffRate"/>
+                                <xs:element type="xs:float" name="commission"/>
+                                <xs:element type="xs:float" name="commissionExecutionAmt"/>
+                                <xs:element type="xs:string" name="commissionInd"/>
+                                <xs:element type="xs:float" name="commissionResearchAmt"/>
+                                <xs:element type="xs:string" name="conditionInd"/>
+                                <xs:element type="xs:string" name="creditBroker"/>
+                                <xs:element type="xs:string" name="crossTradeId"/>
+                                <xs:element type="xs:string" name="custodianAccountBBHDM"/>
+                                <xs:element type="xs:string" name="custodianBICBBHDM"/>
+                                <xs:element type="xs:string" name="custodianFundNumber"/>
+                                <xs:element type="xs:string" name="custodianName"/>
+                                <xs:element type="xs:string" name="custodianNameBBHDM"/>
+                                <xs:element type="xs:string" name="deliveryType"/>
+                                <xs:element type="xs:string" name="fundCurrency"/>
+                                <xs:element type="xs:float" name="localNetAmount"/>
+                                <xs:element type="xs:byte" name="localToBaseFXRate"/>
+                                <xs:element type="xs:string" name="lotBasedFund"/>
+                                <xs:element type="xs:string" name="omsAcctCode"/>
+                                <xs:element type="xs:string" name="omsAcctEglEntityId"/>
+                                <xs:element type="xs:string" name="omsAcctName"/>
+                                <xs:element type="xs:string" name="omsCrossingAcct"/>
+                                <xs:element type="xs:string" name="omsCrossingAcctEglEntityId"/>
+                                <xs:element type="xs:string" name="omsCrossingAcctName"/>
+                                <xs:element type="xs:string" name="originalTradeId"/>
+                                <xs:element type="xs:float" name="otherFee"/>
+                                <xs:element type="xs:string" name="pmUser"/>
+                                <xs:element type="xs:string" name="pmUserName"/>
+                                <xs:element type="xs:string" name="primeBroker"/>
+                                <xs:element type="xs:float" name="principalAmt"/>
+                                <xs:element type="xs:string" name="pset"/>
+                                <xs:element type="xs:float" name="secFee"/>
+                                <xs:element type="xs:string" name="securityCurrency"/>
+                                <xs:element type="xs:byte" name="securityToUsdRate"/>
+                                <xs:element type="xs:string" name="settlementAccountCode"/>
+                                <xs:element type="xs:string" name="settlementAccountName"/>
+                                <xs:element type="xs:string" name="settlementAcctEglEntityId"/>
+                                <xs:element type="xs:string" name="settlementCrossingAcct"/>
+                                <xs:element type="xs:string" name="settlementCrossingAcctCustodianName"/>
+                                <xs:element type="xs:string" name="settlementCrossingAcctEglEntityId"/>
+                                <xs:element type="xs:string" name="settlementCrossingAcctFundNumber"/>
+                                <xs:element type="xs:string" name="settlementCrossingAcctName"/>
+                                <xs:element type="xs:string" name="stepOutBroker"/>
+                                <xs:element type="xs:byte" name="totalLotsRelieved"/>
+                                <xs:element type="xs:string" name="tradedCurrency"/>
+                                <xs:element type="xs:string" name="tradedCurrencyToUsd"/>
+                                <xs:element type="xs:float" name="tradedInterest"/>
+                                <xs:element type="xs:string" name="tradedInterestCcy"/>
+                                <xs:element type="xs:byte" name="tradedToUsdRate"/>
+                                <xs:element type="xs:int" name="tradeId"/>
+                                <xs:element name="tradeLot">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:int" name="lotId"/>
+                                      <xs:element type="xs:string" name="relievingLotBrokerReason"/>
+                                      <xs:element type="xs:string" name="relievingLotFollowsFundMethod"/>
+                                      <xs:element type="xs:string" name="relievingLotOmsExecBroker"/>
+                                      <xs:element type="xs:string" name="relievingLotOrderId"/>
+                                      <xs:element type="xs:string" name="relievingLotPrice"/>
+                                      <xs:element type="xs:string" name="relievingLotQty"/>
+                                      <xs:element type="xs:string" name="relievingLotReliefMethodCd"/>
+                                      <xs:element type="xs:string" name="relievingLotReliefMethodDesc"/>
+                                      <xs:element type="xs:string" name="relievingLotSettleDate"/>
+                                      <xs:element type="xs:string" name="relievingLotSettleExecBroker"/>
+                                      <xs:element type="xs:string" name="relievingLotTradeDate"/>
+                                      <xs:element type="xs:string" name="relievingLotTradeId"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="entityFlag"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="FH_CountryOfQuotation"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
